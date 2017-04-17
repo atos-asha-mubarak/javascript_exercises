@@ -1,0 +1,40 @@
+
+<html>
+<head>
+
+<title></title>
+  
+<body>
+  
+<h2>Try your invert string here..</h2>
+ <input type="text" id="input" />
+<button onclick="myFunction()">submit</button>
+
+
+<h2 id="display" ></h2>
+<script>
+function myFunction() {
+  
+    var text = document.getElementById("input").value;   
+  var str = reverseStrin(text);
+    return str;
+  
+}
+
+function reverseStrin(str){
+//var str="hello";
+var reverseStn = "";
+for(var i=str.length-1; i>=0; i--)
+
+reverseStn=reverseStn+str[i];
+    
+ document.getElementById("display").innerHTML = reverseStn;
+}
+</script>
+  </head>
+ 
+   
+  </body>
+</html>
+
+                                

@@ -1,0 +1,70 @@
+
+<html>
+<head><title>...</title>
+</head>
+<body>
+<script>
+
+ function combString(){
+ var str= document.getElementById("input").value;
+ var lenStr = str.length;
+ var result = [];
+ var indexCurrent = 0;
+
+ while(indexCurrent < lenStr){ 
+     var arr = str.charAt(indexCurrent); 
+     var val;
+     var arrTemp = [arr];//put the selected char in an array
+
+     for(val in result) {
+
+
+
+            arrTemp.push(""+result[val]+arr);
+     }
+     result = result.concat(arrTemp)
+
+     indexCurrent++; 
+ }
+ 
+//document.write(result);
+ document.getElementById("output").innerHTML = result;
+
+ }
+</script>
+
+<h2>Try your combination of string here..</h2>
+ <input type="text" id="input" />
+ 
+ <h2 id="output" ></h2>
+
+        <form>
+         <input type="button" onclick="combString()" value="Click me">
+      </form>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

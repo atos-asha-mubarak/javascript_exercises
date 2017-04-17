@@ -1,0 +1,32 @@
+
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="PSPad editor, www.pspad.com">
+  <title></title>
+  </head>
+  <body>
+
+
+  <script> 
+    var someString = 'ADBCGHIEFKJLADTVDERFSWVGHQWCNOPENSMSJWIERTFB';    
+
+function firstunique(string) {
+
+    for (var i = 0; i < string.length; i++) {
+        var c = string.charAt(i);
+        if (string.indexOf(c) == i && string.indexOf(c, i + 1) == -1) {
+            return c;
+        }
+    }
+    return null;
+}
+
+ document.write("Your String input is: "+ someString + "<br />");
+document.write("first unique charater of the input string is:  "+ firstunique(someString));
+
+ </script>
+ 
+ 
+  </body>
+</html>

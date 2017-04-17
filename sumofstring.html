@@ -1,0 +1,35 @@
+
+<html>
+  <head>
+
+  <title> sum of strings</title>
+  
+   <body>
+  
+<h2>Try your number here..</h2>
+ <input type="text" id="input" />
+<button onclick="myFunction()">submit</button>
+
+  
+<h2 id="output" ></h2>
+<script>
+function myFunction() {
+     var i,res=0;
+    var text = document.getElementById("input").value;   
+	for(i=0; i<=text; i++)
+	{
+	   res+=i;
+	}
+    document.getElementById("output").innerHTML = res;
+    
+  
+}
+
+</script>
+  </head>
+ 
+   
+  </body>
+</html>
+
+                                
