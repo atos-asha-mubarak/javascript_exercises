@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head><title>array of objects </title>
+</head>
+<body>
+
+<script>
+function treeify(nodes) {
+    var indexed_nodes = {}, tree_roots = [];
+    for (var i = 0; i < nodes.length; i += 1) {
+	
+        indexed_nodes[nodes[i].id] = nodes[i];
+		//alert(nodes.length);
+		//alert(id);
+		//alert(nodes[i]);
+		
+    }
+    for (var i = 0; i < nodes.length; i += 1) {
+	   
+        var parent_id = nodes[i].parent_id;
+        if (parent_id == null) {
+            tree_roots.push(nodes[i]);
+			//alert(parent_id);
+			//alert(nodes[i]);
+        } else {
+            indexed_nodes[parent_id].children.push(nodes[i].name);
+			
+        }
+    }
+    return tree_roots;
+}
+
+
+
+var nodes = [
+    {"id":1, "name":"dog", "parent_id":null, "children":[]},
+    {"id":2, "name":"Buddy", "parent_id":1},
+    {"id":3, "name":"Daisy", "parent_id":1},
+    {"id":4, "name":"cat", "parent_id":null, "children":[]},
+    {"id":5, "name":"Smokey", "parent_id":4},
+    {"id":6, "name":"Oscar", "parent_id":4}
+];
+
+var result=JSON.stringify(treeify(nodes), undefined, "\t");
+
+document.write(result);
+
+</script>
+
+
+
+</body>
+</html>
